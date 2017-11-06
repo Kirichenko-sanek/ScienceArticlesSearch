@@ -6,18 +6,12 @@ const app = express();
 const routes = require('./routes');
 const services = require('./services');
 
-const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/mydb";
-
-
 const port = 8000;
 
 
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  console.log("Database created!");
-  db.close();
-});
+var promise = mongoose.connect('mongodb://localhost/sciencearticlessearch', {
+  useMongoClient: true
+})
 
 app.use(logger('dev'));
 app.use(express.static(__dirname + '/public'));
