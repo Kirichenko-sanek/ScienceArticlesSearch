@@ -6,7 +6,7 @@ class SysAdminController {
   addLecturer(req, res) {
     this.sysAdminService.addLecturer()
       .then(result => res.json(result))
-      .catch(err => this.handleError('addLecturer', err, res))
+      .catch(err => this.handleError('addLecturer', err, res));
   }
 
   handleError(method, err, res) {

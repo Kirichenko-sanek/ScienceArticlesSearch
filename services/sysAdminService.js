@@ -23,7 +23,7 @@ class SysAdminService {
             let lecturer = new Lecturer({
               name: l.name,
               surname: l.surname,
-              code: l.code
+              ieeeSearch: l.ieeeSearch
             });
             return lecturer.save();
           } else {
@@ -34,7 +34,7 @@ class SysAdminService {
 
     return Promise.all(arrayOfPromises)
     	.then(result => {
-    		var a = 0;
+    		return result;
     	});
   }
 }

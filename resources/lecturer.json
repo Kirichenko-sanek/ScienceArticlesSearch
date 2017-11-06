@@ -3,7 +3,12 @@
 		{
 			"name": "duzhy",
 			"surname": "duzhy",
-			"code": "duzhy"
+			"ieeeSearch": "duzhy"
+		},
+		{
+			"name": "kharchenko",
+			"surname": "kharchenko",
+			"ieeeSearch": "v.kharchenko"
 		}
 	]
 }
