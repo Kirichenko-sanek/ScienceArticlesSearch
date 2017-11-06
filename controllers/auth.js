@@ -4,6 +4,8 @@ class AuthController {
   }
 
   register(req, res) {
-  	
+
   }
 }
+
+module.exports = AuthController
