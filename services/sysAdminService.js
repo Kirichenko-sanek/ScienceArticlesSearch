@@ -23,7 +23,8 @@ class SysAdminService {
             let lecturer = new Lecturer({
               name: l.name,
               surname: l.surname,
-              ieeeSearch: l.ieeeSearch
+              ieeeSearch: l.ieeeSearch,
+              scopusSearch: l.scopusSearch
             });
             return lecturer.save();
           } else {
