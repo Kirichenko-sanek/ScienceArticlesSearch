@@ -1,6 +1,8 @@
 let Browser = require('zombie');
 let browser = new Browser({ debug: false });
+let cheerio = require('cheerio')
 
+var _ = require('lodash');
 let Lecturer = require('../models/lecturer');
 
 class CrawlerService {
@@ -44,6 +46,16 @@ class CrawlerService {
         return browser.html();
       })
       .then(html => {
+        let $ = cheerio.load(html);
+
+        let info = $('#documentListUl').find('li');
+        
+        _.map(info, function(i){
+          let $_info = cheerio.load(i.html());
+          var a = 0;
+        });
+
+
         var a = 0;
       });
 

@@ -34,9 +34,9 @@ class SysAdminService {
     });
 
     return Promise.all(arrayOfPromises)
-    	.then(result => {
-    		return result;
-    	});
+      .then(result => {
+        return result;
+      });
   }
 }
 
