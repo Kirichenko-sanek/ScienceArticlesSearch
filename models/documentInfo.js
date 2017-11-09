@@ -2,7 +2,7 @@
 
 let mongoose = require('mongoose');
 
-let documentInfoSchema = new mongoose.schema({
+let documentInfoSchema = new mongoose.Schema({
   name: String,
   author: {
     type: mongoose.Schema.ObjectId,
