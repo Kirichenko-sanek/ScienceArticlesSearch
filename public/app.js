@@ -1,6 +1,7 @@
 angular.module('app', [
     'ui.router',
 
+    'common',
     'home',
     'library'
 
