@@ -5,11 +5,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no" />
 	<title>Science Articles Search</title>
-</head>
-<body>
-	Hello
 
-	<data ui-view></data>
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body ng-class="{'homepage' : pageHome, 'left-sidebar': !pageHome}">
+	<div id="page-wraper">
+		
+		<div id="header-wrapper" class="wrapper">
+			<div id="header">
+				<div id="logo">
+					<h1>Science Articles Search</h1>
+				</div>
+
+				<nav id="nav">
+					<ul>
+						<li>
+							<a data-ui-sref="home">Home</a>
+						</li>
+						<li>
+							<a href="">Library</a>
+							<ul>
+								<li>
+									<a data-ui-sref="library.scopus">Scopus</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<data ui-view></data>
+
+		
+		<div id="footer-wrapper" class="wrapper">
+			<div class="title">Footer</div>
+		</div>
+	</div>
+
+
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/jquery-ui/jquery-ui.js"></script>
@@ -26,8 +60,25 @@
  	<script src="home/home.js"></script>
  	<script src="home/home.vm.js"></script>
  	<script src="home/home.ctrl.js"></script>
+
+ 	<script src="library/library.js"></script>
+ 	<script src="library/library.ctrl.js"></script>
+ 	<script src="library/info/info.vm.js"></script>
+ 	<script src="library/info/info.ctrl.js"></script>
+
+
+
  	
  	<script src="app.js"></script>
+
+
+ 	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/skel-viewport.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
 
 
 </body>

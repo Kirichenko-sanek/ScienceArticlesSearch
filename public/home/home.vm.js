@@ -1,6 +1,7 @@
 angular.module('home')
-  .factory('homeVm', [function() {
+  .factory('homeVm', ['$rootScope', function($rootScope) {
     return function() {
     	var self = this;
+    	$rootScope.pageHome = true;
     }
   }])

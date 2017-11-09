@@ -1,8 +1,8 @@
 angular.module('app', [
     'ui.router',
 
-    'home'
-
+    'home',
+    'library'
 
   ])
   .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
