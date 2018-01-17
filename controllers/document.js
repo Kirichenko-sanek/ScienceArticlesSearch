@@ -9,7 +9,11 @@ class DocumentController {
       .catch(err => this.handleError('getAllLecturer', err, res));
   }
 
-
+  getAllDocument(req, res) {
+    this.documentService.getAllDocument(req.params.id)
+      .then(result => res.json(result))
+      .catch(err => this.handleError('getAllDocument', err, res));
+  }
 
   handleError(method, err, res) {
     console.log(`Error in ${method} method: ${err}`)

@@ -3,4 +3,8 @@ angular.module('common')
     this.getAllLecturer = function() {
       return $http.get('/api/getAllLecturer');
     }
+
+    this.getAllDocument = function(id){
+      return $http.get('/api/getAllDocument/'+ id);
+    }
   });

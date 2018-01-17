@@ -15,6 +15,7 @@ angular.module('library')
         $rootScope.pageHome = false;
         self.site = $stateParams.site;
         self.lecturer = [];
+        self.info = [];
 
         self.getLecturer = function() {
           documentService.getAllLecturer()
@@ -24,7 +25,16 @@ angular.module('library')
               }
 
             });
-        }
+        };
+
+        self.loadInfo = function(id){
+          documentService.getAllDocument(id)
+            .then(result => {
+              if (result.data) {
+                self.info = result.data;
+              }
+            });
+        };
 
 
 

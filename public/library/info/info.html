@@ -1,1 +1,18 @@
-info
+<div class="wrapper style2">
+    <div class="title">Scopus</div>
+    <div id="main" class="container">
+        <div class="row 150%">
+            <div class="4u 12u(mobile)">
+                <div id="sidebar">
+                    <section class="box">
+                        <ul>
+                            <li  ng-repeat="item in vm.lecturer | orderBy:'name'" >
+                                <a href="" ng-click="vm.loadInfo(item._id)">{{item.name}} {{item.surname}}</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

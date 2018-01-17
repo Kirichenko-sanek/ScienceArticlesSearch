@@ -16,6 +16,7 @@ module.exports = {
     app.get('/api/runCrawler', (req, res) => crawlerController.runCrawler(req, res));
 
     app.get('/api/getAllLecturer', (req, res) => documentController.getAllLecturer(req, res));
+    app.get('/api/getAllDocument/:id', (req, res) => documentController.getAllDocument(req, res));
 
 
     app.post('/api/register', authCtrl.register);
