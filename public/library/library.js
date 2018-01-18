@@ -12,10 +12,10 @@ angular.module('library', ['ui.router'])
       	params: {
       		site: 'scopus'
       	}
+      })
+      .state('library.info',{
+        url: '/library/info/:id?',
+        templateUrl: '/library/details/details.html',
+        controller: 'detailsCtrl',
       });
-
-
-
-
-
   });

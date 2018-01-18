@@ -6,11 +6,26 @@
                 <div id="sidebar">
                     <section class="box">
                         <ul>
-                            <li  ng-repeat="item in vm.lecturer | orderBy:'name'" >
+                            <li ng-repeat="item in vm.lecturer | orderBy:'name'">
                                 <a href="" ng-click="vm.loadInfo(item._id)">{{item.name}} {{item.surname}}</a>
                             </li>
                         </ul>
                     </section>
+                </div>
+            </div>
+            <div class="8u 12u(mobile) important(mobile)">
+                <div id="content">
+                    <div class="row 150%">
+                        <div class="6u 12u(mobile)" ng-repeat="item in vm.info">
+                            <section class="box">
+                                <header>
+                                    <h2>{{item.name}}</h2>
+                                </header>
+                                <p>{{item.year}}</p>
+                                <a href="" ng-click="vm.goInfo(item._id)" class="button style1">More</a>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

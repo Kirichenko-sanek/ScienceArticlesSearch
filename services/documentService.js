@@ -15,6 +15,12 @@ class DocumentService {
       author: id
     });
   }
+
+  getDocument(id) {
+    return DocumentInfo.findOne({
+      _id: id
+    });
+  }
 }
 
 module.exports = DocumentService

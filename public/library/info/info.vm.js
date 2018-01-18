@@ -3,11 +3,13 @@ angular.module('library')
     '$rootScope',
     '$stateParams',
     'documentService',
+    '$state',
 
     function(
       $rootScope,
       $stateParams,
-      documentService
+      documentService,
+      $state
     ) {
       return function() {
         var self = this;
@@ -36,13 +38,11 @@ angular.module('library')
             });
         };
 
-
-
-
+        self.goInfo = function(id) {
+          $state.go('library.info', {id: id});
+        }
 
         self.getLecturer();
-
-
       }
     }
   ])
