@@ -19,7 +19,11 @@
                         <div class="6u 12u(mobile)" ng-repeat="item in vm.info">
                             <section class="box">
                                 <header>
-                                    <h2>{{item.name}}</h2>
+                                    <h2 style="overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;">{{item.name}}</h2>
                                 </header>
                                 <p>{{item.year}}</p>
                                 <a href="" ng-click="vm.goInfo(item._id)" class="button style1">More</a>
